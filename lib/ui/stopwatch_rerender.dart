@@ -25,6 +25,16 @@ class StopWatchRerender extends StatelessWidget {
         //       border: Border.all(width: 3, color: Colors.orange),
         //       borderRadius: BorderRadius.circular(radius)),
         // ),
+        for (var i = 5; i <= 60; i += 5)
+          Positioned(
+              left: radius,
+              top: radius,
+              child: ClockTextMarker(
+                radius: radius,
+                maxValue: 60,
+                value: i,
+              )),
+
         Positioned(
           left: radius,
           top: radius,
