@@ -47,6 +47,15 @@ class _StopwatchState extends State<Stopwatch>
     });
   }
 
+  void reset() {
+    _ticker.stop();
+    setState(() {
+      _isRunning = false;
+      _previoslyElapsed = Duration.zero;
+      _currentlyElapsed = Duration.zero;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -61,7 +70,7 @@ class _StopwatchState extends State<Stopwatch>
                 width: 80,
                 height: 80,
                 child: ResetButton(
-                  onPressed: () {},
+                  onPressed: reset,
                 ),
               ),
             ),
