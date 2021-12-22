@@ -1,4 +1,7 @@
 # Flutter Stopwatch
+## Features
+- Start stop timer
+- Reset Timer
 
 ## Screenshot
 
